@@ -1,0 +1,37 @@
+Compiling E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2 on 29-May-22 at 10:34
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 135(1,2): Illegal C character in input file  0x00
+*** Error 22 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 135(1,2): Bad expression syntax
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x07
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Illegal C character in input file  0x00
+*** Error 43 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(3,4): Expecting a declaration
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(8,9): Illegal C character in input file  0xDF
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(10,11): Illegal C character in input file  0x92
+*** Error 1 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 136(10,11): Illegal C character in input file  0xA6
+*** Error 48 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 136(8,9): Expecting a (
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 26(14,15): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 28(24,25): Undefined identifier  -- lcd_putc
+*** Error 51 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 29(4,8): A numeric expression must appear here
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 31(14,15): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 32(24,25): Undefined identifier  -- lcd_putc
+*** Error 51 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 33(4,8): A numeric expression must appear here
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 35(14,15): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 36(11,19): Undefined identifier   lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 37(12,13): Undefined identifier  -- lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 37(27,28): Undefined identifier  -- lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 39(14,15): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 40(11,19): Undefined identifier   lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 41(12,13): Undefined identifier  -- lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 41(27,28): Undefined identifier  -- lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2.c" Line 51(12,13): Undefined identifier  -- lcd_init

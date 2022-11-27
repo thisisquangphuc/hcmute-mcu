@@ -1,0 +1,28 @@
+#include <16f887.h>
+#fuses intrc
+#use delay(clock=8M)
+const unsigned int8 code7seg[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90}; 
+
+#define P1 pin_b1
+#define P2 pin_b2
+#define P3 pin_b3
+
+//khai bao bien 
+unsigned int8 mode=0; 
+
+
+
+void main()
+{  
+   set_tris_d(0x00);
+   set_tris_b(0xff);
+   set_tris_c(0x00);
+   
+   setup_timer_1(t1_div_by_1|t1_internal);
+   set_timer1(64536);
+   
+   while(true)
+   {
+      
+   }
+}

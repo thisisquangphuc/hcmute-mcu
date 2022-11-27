@@ -1,0 +1,59 @@
+[PROJECT]
+Target=hk1-19-20-vdk1.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=hk1-19-20-vdk1.c
+[hk1-19-20-vdk1.c]
+Type=4
+[mru-list]
+1=hk1-19-20-vdk1.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=2
+D1=29-05-2022
+D1_L=4
+D1_L1=[39679]Started Editing.
+D1_L2=[40243]Project Closed.
+D1_L3=[40297]Project Opened.
+D1_L4=[41762]Project Closed.
+D2=04-06-2022
+D2_L=7
+D2_L1=[65937]Project Opened.
+D2_L2=[65938]Project Closed.
+D2_L3=[65940]Project Opened.
+D2_L4=[66026]Started Editing.
+D2_L5=[67199]Stopped Editing.
+D2_L6=[67371]Started Editing.
+D2_L7=[68837]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=57
+3=..\Day2\adc_qn.c
+t3=1
+4=..\Day2\taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+6=hk2-17-18-cau2.c
+t6=1
+7=hk1-18-19-cau3.c
+t7=1
+8=hk1-19-20-vdk1.c
+t8=1
+9=hk1-19-20-vdk2.c
+t9=43
+Count=9
+[Units]
+Count=1
+1=hk1-19-20-vdk1 (main)

@@ -1,0 +1,174 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     SPEED
+028.0   mode
+029-02A POT
+02B     rx_data
+02C     @TRIS_C
+02D-02E @ITOF.P1
+02D     lcd_init.i
+02D-030 @SFTOI.P1
+02D     @DIV88.P2
+02D-030 @DIVFF.P3
+02D     MAIN.@SCRATCH1
+02E     @DIV88.P1
+02E-031 lcd_init.LCD_INIT_STRING
+02F     @DIV88.@SCRATCH1
+031-034 @DIVFF.P1
+032     @delay_ms1.P1
+032     lcd_init.@SCRATCH1
+033     lcd_send_byte.address
+034     lcd_send_byte.n
+035     lcd_read_byte.low
+035     lcd_send_byte.@SCRATCH1
+035     @DIVFF.@SCRATCH1
+036     lcd_read_byte.high
+036     lcd_send_nibble.n
+036     @DIVFF.@SCRATCH2
+037     lcd_read_nibble.n
+037     lcd_read_byte.@SCRATCH1
+037     @DIVFF.@SCRATCH3
+038     lcd_read_nibble.@SCRATCH1
+038     @DIVFF.@SCRATCH4
+039     @DIVFF.@SCRATCH5
+03A     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07F     @INTERRUPT_AREA
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+107F     @INTERRUPT_AREA
+10FF     @INTERRUPT_AREA
+117F     @INTERRUPT_AREA
+11FF     @INTERRUPT_AREA
+127F     @INTERRUPT_AREA
+12FF     @INTERRUPT_AREA
+137F     @INTERRUPT_AREA
+13FF     @INTERRUPT_AREA
+147F     @INTERRUPT_AREA
+14FF     @INTERRUPT_AREA
+157F     @INTERRUPT_AREA
+15FF     @INTERRUPT_AREA
+167F     @INTERRUPT_AREA
+16FF     @INTERRUPT_AREA
+177F     @INTERRUPT_AREA
+17FF     @INTERRUPT_AREA
+187F     @INTERRUPT_AREA
+18FF     @INTERRUPT_AREA
+197F     @INTERRUPT_AREA
+19FF     @INTERRUPT_AREA
+1A7F     @INTERRUPT_AREA
+1AFF     @INTERRUPT_AREA
+1B7F     @INTERRUPT_AREA
+1BFF     @INTERRUPT_AREA
+1C7F     @INTERRUPT_AREA
+1CFF     @INTERRUPT_AREA
+1D7F     @INTERRUPT_AREA
+1DFF     @INTERRUPT_AREA
+1E7F     @INTERRUPT_AREA
+1EFF     @INTERRUPT_AREA
+1F7F     @INTERRUPT_AREA
+1FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000031  code7seg.call
+000035  code7seg.data
+00003F  ngat_nhan
+00004F  @delay_ms1
+000063  lcd_send_nibble
+00008F  lcd_read_nibble
+0000C0  lcd_init
+000100  lcd_send_byte
+000108  lcd_read_byte
+000160  @ITOF
+00017F  @DIVFF
+00024B  @SFTOI
+00026C  @DIV88
+000283  MAIN
+000283  @cinit1
+0002AB  @cinit2
+
+Project Directory:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\
+
+Project Files:
+    hk2_21_22_uc1.c                                         [05-Jun-22 11:12  CRC=768C391B]
+    C:\Program Files (x86)\PICC\Devices\16f887.h            [21-Jan-21 18:32  CRC=461DBE83]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-Feb-16 16:05  CRC=D1A6378A]
+
+Source signature=5FF666B2
+Program memory checksum=0000
+Hex file CRC=A672
+
+Units:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_uc1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   hk2_21_22_uc1.xsym
+    Errors:      hk2_21_22_uc1.err
+    Ext Symbols: hk2_21_22_uc1.esym
+    INHX8:       hk2_21_22_uc1.hex
+    Symbols:     hk2_21_22_uc1.sym
+    List:        hk2_21_22_uc1.lst
+    Debug/COFF:  hk2_21_22_uc1.cof
+    Project:     hk2_21_22_uc1.ccspjt
+    Call Tree:   hk2_21_22_uc1.tre
+    Statistics:  hk2_21_22_uc1.STA

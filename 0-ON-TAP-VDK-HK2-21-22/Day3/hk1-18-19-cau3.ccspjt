@@ -1,0 +1,53 @@
+[PROJECT]
+Target=hk1-18-19-cau3.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=hk1-18-19-cau3.c
+[hk1-18-19-cau3.c]
+Type=4
+[mru-list]
+1=hk1-18-19-cau3.c
+
+[defines]
+buildcount=2
+
+[ProjectLog]
+Days=1
+D1=29-05-2022
+D1_L=7
+D1_L1=[38426]Stopped Editing.
+D1_L2=[38514]Started Editing.
+D1_L3=[38516]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L4=[38687]Started Editing.
+D1_L5=[38988]Stopped Editing.
+D1_L6=[39277]Started Editing.
+D1_L7=[39664]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=57
+3=..\Day2\adc_qn.c
+t3=1
+4=..\Day2\taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+6=hk2-17-18-cau2.c
+t6=1
+7=hk1-18-19-cau3.c
+t7=1
+Count=7
+[Units]
+Count=1
+1=hk1-18-19-cau3 (main)

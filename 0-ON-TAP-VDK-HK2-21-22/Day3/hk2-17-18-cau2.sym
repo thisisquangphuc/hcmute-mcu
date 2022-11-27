@@ -1,0 +1,124 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     lcdlat
+008     lcd
+00C.0   TMR1IF
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     nd1
+021     nd2
+022.0   led_status
+022.1   update_temp
+023     count
+024-025 @sprintf_string
+026     lcd_init.i
+026-029 @SFTOI.P1
+026     @PRINTF_U_733.P2
+026     @PSTRINGC7_733.@SCRATCH1
+026     MAIN.@SCRATCH1
+027     @PRINTF_U_733.P1
+027-02A lcd_init.LCD_INIT_STRING
+027     @PSTRINGC7_733.@SCRATCH2
+027     MAIN.@SCRATCH2
+028-02B @DIVFF.P1
+028-029 @ITOF.P2
+028     @DIV88.P3
+028     @PSTRINGC7_733.@SCRATCH3
+029     @DIV88.P1
+029     lcd_putc.c
+029     @PSTRINGC7_733.@SCRATCH4
+02A     lcd_gotoxy.x
+02A     @DIV88.@SCRATCH1
+02B     @delay_ms1.P1
+02B     lcd_gotoxy.y
+02B     lcd_init.@SCRATCH1
+02C     lcd_gotoxy.address
+02C-02F @DIVFF.P1
+02D     lcd_gotoxy.@SCRATCH1
+02E     lcd_send_byte.address
+02F     lcd_send_byte.n
+030     lcd_read_byte.low
+030     lcd_send_byte.@SCRATCH1
+030     @DIVFF.@SCRATCH1
+031     lcd_send_nibble.n
+031     lcd_read_byte.high
+031     @DIVFF.@SCRATCH2
+032     lcd_read_byte.@SCRATCH1
+032     @DIVFF.@SCRATCH3
+033     @DIVFF.@SCRATCH4
+034     @DIVFF.@SCRATCH5
+035     @DIVFF.@SCRATCH6
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const752.call
+000006  @const757.call
+000008  @const758.call
+00000A  @const759.call
+00000C  @delay_ms1
+000020  lcd_send_nibble
+00002F  lcd_read_nibble
+000035  lcd_send_byte
+00003B  lcd_read_byte
+000077  lcd_init
+0000B5  @ITOF
+0000D2  @DIVFF
+00019C  @SFTOI
+0001BB  lcd_gotoxy
+0001CD  lcd_putc
+0001F9  @PSTRINGC7_733
+00024F  @DIV88
+000264  @PRINTF_U_733
+000299  ht_lcd
+0002FD  @cinit1
+0002FD  MAIN
+000314  @cinit2
+
+Project Directory:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\
+
+Project Files:
+    hk2-17-18-cau2.c                                        [29-May-22 09:53  CRC=79743BFF]
+    C:\Program Files (x86)\PICC\Devices\16F887.H            [21-Jan-21 18:32  CRC=461DBE83]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-Feb-16 16:05  CRC=D1A6378A]
+
+Source signature=62DE6996
+Program memory checksum=0000
+Hex file CRC=669C
+
+Units:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk2-17-18-cau2 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   hk2-17-18-cau2.xsym
+    Errors:      hk2-17-18-cau2.err
+    Ext Symbols: hk2-17-18-cau2.esym
+    INHX8:       hk2-17-18-cau2.hex
+    Symbols:     hk2-17-18-cau2.sym
+    List:        hk2-17-18-cau2.lst
+    Debug/COFF:  hk2-17-18-cau2.cof
+    Project:     hk2-17-18-cau2.ccspjt
+    Call Tree:   hk2-17-18-cau2.tre
+    Statistics:  hk2-17-18-cau2.STA

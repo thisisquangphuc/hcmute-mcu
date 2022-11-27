@@ -1,0 +1,64 @@
+[PROJECT]
+Target=hk2_21_22_uc1.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=hk2_21_22_uc1.c
+[hk2_21_22_uc1.c]
+Type=4
+[mru-list]
+1=hk2_21_22_uc1.c
+
+[defines]
+buildcount=13
+
+[ProjectLog]
+Days=1
+D1=05-06-2022
+D1_L=8
+D1_L1=[37784]Stopped Editing.
+TotalEdit=23
+TotalDebug=0
+D1_E=23
+D1_D=0
+D1_L2=[38093]Started Editing.
+D1_L3=[38814]Project Closed.
+D1_L4=[39097]Project Opened.
+D1_L5=[39181]Started Editing.
+D1_L6=[40349]Stopped Editing.
+D1_L7=[40464]Started Editing.
+D1_L8=[42181]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=59
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=41
+3=..\Day2\adc_qn.c
+t3=1
+4=..\Day2\taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+6=..\day3\hk2-17-18-cau2.c
+t6=1
+7=..\day3\hk1-18-19-cau3.c
+t7=1
+8=..\day3\hk1-19-20-vdk1.c
+t8=1
+9=..\day3\hk1-19-20-vdk2.c
+t9=1
+10=..\Day4\Giua_ki_lan2_pic.c
+t10=1
+11=hk2_21_22_uc1.c
+t11=1
+Count=12
+12=hk2_21_22_uc2.c
+t12=53
+[Units]
+Count=1
+1=hk2_21_22_uc1 (main)

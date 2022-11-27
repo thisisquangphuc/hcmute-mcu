@@ -1,0 +1,142 @@
+CCS PCM C Compiler, Version 5.101, 43599               29-May-22 11:11
+
+               Filename:   E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk1-19-20-vdk1.lst
+
+               ROM used:   77 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           8 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #INCLUDE <16F887.H>
+.................... //////////// Standard Header file for the PIC16F887 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F887
+.................... 
+.................... #list
+.................... 
+.................... #fuses intrc   //intrc_io
+.................... #use delay(clock=8M)
+.................... #use rs232(BAUD=9600,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 
+.................... 
+.................... #define RUN       pin_d0
+.................... #define STOP      pin_d1
+.................... #define LED_STATUS    pin_d2
+.................... 
+.................... unsigned char rx_data=0;
+.................... int1 mode=0;         //0=stop, 1=run
+.................... 
+.................... void main()
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  71
+0008:  BSF    03.5
+0009:  MOVWF  0F
+000A:  CLRF   10
+000B:  MOVF   0F,W
+000C:  BSF    03.6
+000D:  BCF    07.3
+000E:  MOVLW  0C
+000F:  BCF    03.6
+0010:  MOVWF  19
+0011:  MOVLW  A2
+0012:  MOVWF  18
+0013:  MOVLW  90
+0014:  BCF    03.5
+0015:  MOVWF  18
+0016:  CLRF   20
+0017:  BCF    21.0
+0018:  BSF    03.5
+0019:  BSF    03.6
+001A:  MOVF   09,W
+001B:  ANDLW  C0
+001C:  MOVWF  09
+001D:  BCF    03.6
+001E:  BCF    1F.4
+001F:  BCF    1F.5
+0020:  MOVLW  00
+0021:  BSF    03.6
+0022:  MOVWF  08
+0023:  BCF    03.5
+0024:  CLRF   07
+0025:  CLRF   08
+0026:  CLRF   09
+0027:  BCF    03.7
+.................... {
+....................    set_tris_d(0x03); //0b0000.0011
+0028:  MOVLW  03
+0029:  BSF    03.5
+002A:  BCF    03.6
+002B:  MOVWF  08
+....................    set_tris_d(0x80); 
+002C:  MOVLW  80
+002D:  MOVWF  08
+....................    output_low(LED_STATUS);
+002E:  BCF    08.2
+002F:  BCF    03.5
+0030:  BCF    08.2
+....................    
+....................    while(true)
+....................    {
+....................     
+....................       if(input(RUN)==0)
+0031:  BSF    03.5
+0032:  BSF    08.0
+0033:  BCF    03.5
+0034:  BTFSC  08.0
+0035:  GOTO   03E
+....................       {
+....................          output_high(LED_STATUS);
+0036:  BSF    03.5
+0037:  BCF    08.2
+0038:  BCF    03.5
+0039:  BSF    08.2
+....................          putc('1');
+003A:  MOVLW  31
+003B:  BTFSS  0C.4
+003C:  GOTO   03B
+003D:  MOVWF  19
+....................       }
+....................       if(input(STOP)==0)
+003E:  BSF    03.5
+003F:  BSF    08.1
+0040:  BCF    03.5
+0041:  BTFSC  08.1
+0042:  GOTO   04B
+....................       {
+....................          output_low(LED_STATUS);
+0043:  BSF    03.5
+0044:  BCF    08.2
+0045:  BCF    03.5
+0046:  BCF    08.2
+....................          putc('0');
+0047:  MOVLW  30
+0048:  BTFSS  0C.4
+0049:  GOTO   048
+004A:  MOVWF  19
+....................       }
+004B:  GOTO   031
+....................             
+....................    }
+....................    
+.................... }
+004C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE5   INTRC NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

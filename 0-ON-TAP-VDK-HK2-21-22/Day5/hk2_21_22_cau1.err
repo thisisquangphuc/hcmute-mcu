@@ -1,0 +1,7 @@
+Compiling E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1 on 26-Nov-22 at 03:59
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 32(20,21): Undefined identifier  -- clear_interrupts
+*** Error 51 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 55(10,11): A numeric expression must appear here
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 85(17,18): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 86(14,22): Undefined identifier   lcd_putc
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 87(17,18): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day5\hk2_21_22_cau1.c" Line 88(14,22): Undefined identifier   lcd_putc

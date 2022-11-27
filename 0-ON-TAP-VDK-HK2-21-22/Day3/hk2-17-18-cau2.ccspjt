@@ -1,0 +1,66 @@
+[PROJECT]
+Target=hk2-17-18-cau2.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=hk2-17-18-cau2.c
+[hk2-17-18-cau2.c]
+Type=4
+[mru-list]
+1=hk2-17-18-cau2.c
+
+[defines]
+buildcount=8
+
+[ProjectLog]
+Days=1
+D1=29-05-2022
+D1_L=22
+D1_L1=[35014]Started Editing.
+D1_L2=[35152]Stopped Editing.
+TotalEdit=13
+TotalDebug=0
+D1_E=13
+D1_D=0
+D1_L3=[35198]Started Editing.
+D1_L4=[35244]Stopped Editing.
+D1_L5=[35294]Started Editing.
+D1_L6=[35301]Stopped Editing.
+D1_L7=[35350]Started Editing.
+D1_L8=[35353]Stopped Editing.
+D1_L9=[35598]Started Editing.
+D1_L10=[35601]Stopped Editing.
+D1_L11=[35610]Started Editing.
+D1_L12=[35612]Stopped Editing.
+D1_L13=[35644]Started Editing.
+D1_L14=[35960]Stopped Editing.
+D1_L15=[36962]Started Editing.
+D1_L16=[37232]Stopped Editing.
+D1_L17=[37233]Project Closed.
+D1_L18=[37242]Project Opened.
+D1_L19=[37243]Project Closed.
+D1_L20=[37244]Project Opened.
+D1_L21=[37252]Started Editing.
+D1_L22=[38103]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=49
+3=..\Day2\adc_qn.c
+t3=1
+4=..\Day2\taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+6=hk2-17-18-cau2.c
+t6=1
+Count=6
+[Units]
+Count=1
+1=hk2-17-18-cau2 (main)

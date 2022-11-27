@@ -1,0 +1,51 @@
+#INCLUDE <16F887.H>
+#fuses intrc   //intrc_io
+#use delay(clock=8M)
+#use rs232(BAUD=4800,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 
+
+unsigned char rx_data=0;
+unsigned int8 product=0, prev_product=0;
+unsigned int16 box=0;
+
+void main()
+{
+   set_tris_c(0x81);//0b1000.0001
+     
+     //khong setup counter o day
+     // vi counter hoat dong dua tren ma lenh cua may tinh
+      set_timer1(0);
+      
+   while(true)
+   {
+      if(khbit()==1)  rx_data = getc();
+      else;
+      
+      if(rx_data == '1');  //==0x31 //RUN
+      {
+         //RUN
+         setup_timer_1(t1_external|t1_div_by_1);  //dem san pham         
+      }
+      else if(rx_data == '0')
+      {
+         setup_timer_1(t1_disabled);
+      }
+      
+      product=get_timer1();
+      if(product==50) 
+      {
+         box++;
+         set_timer1(0);
+      }
+      
+      //goi du lieu len may tinh
+      if(product != prev_product)
+      {
+         printf("P=%02u,B=%05Lu", product, box);
+         prev_product = product;
+      }
+      
+       
+      
+   }
+}
+

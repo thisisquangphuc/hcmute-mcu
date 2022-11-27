@@ -1,0 +1,7 @@
+#include <16f887.h>
+#device adc=10
+#fuses intrc   //intrc_io
+#use delay(clock=8Mhz)
+#use rs232(BAUD=9600,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 
+
+

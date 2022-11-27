@@ -1,0 +1,29 @@
+[PROJECT]
+Target=hk1-19-20-vdk2.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=hk1-19-20-vdk2.c
+[hk1-19-20-vdk2.c]
+Type=4
+[mru-list]
+1=hk1-19-20-vdk2.c
+[Units]
+Count=1
+1=hk1-19-20-vdk2 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=29-05-2022
+D1_L=3
+D1_L1=[40293]Started Editing.
+D1_L2=[40297]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L3=[40297]Project Closed.

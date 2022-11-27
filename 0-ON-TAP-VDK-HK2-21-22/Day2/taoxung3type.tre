@@ -1,0 +1,7 @@
+ÀÄtaoxung3type
+   ÀÄmain  0/146  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/22  Ram=1
+      ÃÄ@delay_us1  0/17  Ram=1
+      ÀÄ@delay_us1  0/17  Ram=1

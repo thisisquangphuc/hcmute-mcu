@@ -1,0 +1,304 @@
+CCS PCM C Compiler, Version 5.101, 43599               28-May-22 19:43
+
+               Filename:   E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day2\taoxung3type.lst
+
+               ROM used:   189 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   9 (2%) at main() level
+                           10 (3%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   02B
+0003:  NOP
+.................... #include <16f887.h>
+.................... //////////// Standard Header file for the PIC16F887 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F887
+.................... 
+.................... #list
+.................... 
+.................... #fuses intrc
+.................... #use delay(clock=8M)
+0004:  MOVLW  23
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  02
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  97
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  BCF    0A.3
+0018:  BCF    0A.4
+0019:  GOTO   081 (RETURN)
+001A:  MOVLW  08
+001B:  SUBWF  24,F
+001C:  BTFSS  03.0
+001D:  GOTO   02A
+001E:  MOVLW  24
+001F:  MOVWF  04
+0020:  BCF    03.7
+0021:  BCF    03.0
+0022:  RRF    00,F
+0023:  MOVF   00,W
+0024:  BTFSC  03.2
+0025:  GOTO   02A
+0026:  GOTO   028
+0027:  NOP
+0028:  DECFSZ 00,F
+0029:  GOTO   027
+002A:  RETURN
+.................... const unsigned int8 code7seg[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90}; 
+.................... 
+.................... #define P1        pin_b1
+.................... #define P2        pin_b2
+.................... #define P3        pin_b3
+.................... #define PulseOut  pin_c2
+.................... //khai bao bien 
+.................... unsigned int8 mode=0; 
+.................... unsigned int8 count=0;
+.................... #bit TMR1IF = 0x0c.0
+.................... 
+.................... void main()
+002B:  MOVF   03,W
+002C:  ANDLW  1F
+002D:  MOVWF  03
+002E:  MOVLW  71
+002F:  BSF    03.5
+0030:  MOVWF  0F
+0031:  CLRF   10
+0032:  MOVF   0F,W
+0033:  BCF    03.5
+0034:  CLRF   20
+0035:  CLRF   21
+0036:  MOVLW  FF
+0037:  MOVWF  22
+0038:  BSF    03.5
+0039:  BSF    03.6
+003A:  MOVF   09,W
+003B:  ANDLW  C0
+003C:  MOVWF  09
+003D:  BCF    03.6
+003E:  BCF    1F.4
+003F:  BCF    1F.5
+0040:  MOVLW  00
+0041:  BSF    03.6
+0042:  MOVWF  08
+0043:  BCF    03.5
+0044:  CLRF   07
+0045:  CLRF   08
+0046:  CLRF   09
+0047:  BCF    03.7
+.................... {  
+....................    set_tris_d(0x00);
+0048:  MOVLW  00
+0049:  BSF    03.5
+004A:  BCF    03.6
+004B:  MOVWF  08
+....................    set_tris_b(0xff);
+004C:  MOVLW  FF
+004D:  MOVWF  06
+....................    set_tris_c(0x00);
+004E:  MOVLW  00
+004F:  MOVWF  07
+0050:  BCF    03.5
+0051:  MOVWF  22
+....................    
+....................    //setup_timer_1(t1_div_by_1|t1_internal);
+....................    //set_timer1(64536);
+....................    
+....................    while(true)
+....................    {
+....................       if(input(P1)==0)  
+0052:  BSF    03.5
+0053:  BSF    06.1
+0054:  BCF    03.5
+0055:  BTFSC  06.1
+0056:  GOTO   05D
+....................       {
+....................          mode =1;
+0057:  MOVLW  01
+0058:  MOVWF  20
+....................          //tat timer
+....................          set_timer1(t1_disabled);
+0059:  CLRF   0E
+005A:  CLRF   0F
+005B:  CLRF   0E
+005C:  NOP
+....................       }
+....................       if(input(P2)==0)
+005D:  BSF    03.5
+005E:  BSF    06.2
+005F:  BCF    03.5
+0060:  BTFSC  06.2
+0061:  GOTO   06C
+....................       {
+....................          mode =2;
+0062:  MOVLW  02
+0063:  MOVWF  20
+....................          //bat lai timer 
+....................          setup_timer_1(t1_div_by_1|t1_internal);
+0064:  MOVLW  05
+0065:  MOVWF  10
+....................          set_timer1(64536);
+0066:  CLRF   0E
+0067:  MOVLW  FC
+0068:  MOVWF  0F
+0069:  MOVLW  18
+006A:  MOVWF  0E
+006B:  NOP
+....................       }
+....................       
+....................       
+....................       if(mode ==0 )
+006C:  MOVF   20,F
+006D:  BTFSS  03.2
+006E:  GOTO   076
+....................       {
+....................          output_low(PulseOut); 
+006F:  BCF    22.2
+0070:  MOVF   22,W
+0071:  BSF    03.5
+0072:  MOVWF  07
+0073:  BCF    03.5
+0074:  BCF    07.2
+....................          // 
+....................       }
+0075:  GOTO   0BB
+....................       else if( mode ==1)
+0076:  DECFSZ 20,W
+0077:  GOTO   096
+....................       {
+....................          output_high(PulseOut);
+0078:  BCF    22.2
+0079:  MOVF   22,W
+007A:  BSF    03.5
+007B:  MOVWF  07
+007C:  BCF    03.5
+007D:  BSF    07.2
+....................          delay_us(1500); //1.5ms
+007E:  MOVLW  01
+007F:  MOVWF  23
+0080:  GOTO   004
+0081:  MOVLW  02
+0082:  MOVWF  23
+0083:  MOVLW  F8
+0084:  MOVWF  24
+0085:  CALL   01A
+0086:  DECFSZ 23,F
+0087:  GOTO   083
+....................          output_low(PulseOut);
+0088:  BCF    22.2
+0089:  MOVF   22,W
+008A:  BSF    03.5
+008B:  MOVWF  07
+008C:  BCF    03.5
+008D:  BCF    07.2
+....................          delay_us(500); //0.5ms
+008E:  MOVLW  02
+008F:  MOVWF  23
+0090:  MOVLW  F8
+0091:  MOVWF  24
+0092:  CALL   01A
+0093:  DECFSZ 23,F
+0094:  GOTO   090
+....................       }
+0095:  GOTO   0BB
+....................       else if(mode==2)
+0096:  MOVF   20,W
+0097:  SUBLW  02
+0098:  BTFSS  03.2
+0099:  GOTO   0BB
+....................       {
+....................          //timer1 
+....................          /*cach 1 */
+.................... //!         if(TMR1IF==1) //Tràn 
+.................... //!         {
+.................... //!            // du 0.5ms
+.................... //!            set_timer1(64536); TMR1IF=0;
+.................... //!            count++;
+.................... //!            if(count==4) count=0;
+.................... //!         }
+.................... //!         
+.................... //!         if(count<3) output_high(PulseOut);
+.................... //!         else        output_low(PulseOut);   
+.................... 
+....................       /*cach 2 */
+....................          //dinh thoi 1.5ms
+....................          setup_timer_1(t1_div_by_1|t1_internal);
+009A:  MOVLW  05
+009B:  MOVWF  10
+....................          set_timer1(62536);
+009C:  CLRF   0E
+009D:  MOVLW  F4
+009E:  MOVWF  0F
+009F:  MOVLW  48
+00A0:  MOVWF  0E
+00A1:  NOP
+....................          output_high(PulseOut);
+00A2:  BCF    22.2
+00A3:  MOVF   22,W
+00A4:  BSF    03.5
+00A5:  MOVWF  07
+00A6:  BCF    03.5
+00A7:  BSF    07.2
+....................          while(TMR1IF==1);
+00A8:  BTFSC  0C.0
+00A9:  GOTO   0A8
+....................          TMR1IF=0;
+00AA:  BCF    0C.0
+....................          //dinh thoi 0.5ms
+....................          setup_timer_1(t1_div_by_1|t1_internal);
+00AB:  MOVLW  05
+00AC:  MOVWF  10
+....................          set_timer1(64536);
+00AD:  CLRF   0E
+00AE:  MOVLW  FC
+00AF:  MOVWF  0F
+00B0:  MOVLW  18
+00B1:  MOVWF  0E
+00B2:  NOP
+....................          output_low(PulseOut);
+00B3:  BCF    22.2
+00B4:  MOVF   22,W
+00B5:  BSF    03.5
+00B6:  MOVWF  07
+00B7:  BCF    03.5
+00B8:  BCF    07.2
+....................          while(TMR1IF==1);
+00B9:  BTFSC  0C.0
+00BA:  GOTO   0B9
+....................       
+....................       }
+00BB:  GOTO   052
+....................       
+....................       
+....................    }
+.................... }
+00BC:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE5   INTRC NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

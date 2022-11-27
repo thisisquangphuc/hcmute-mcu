@@ -1,0 +1,71 @@
+[PROJECT]
+Target=adc_qn.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=adc_qn.c
+[adc_qn.c]
+Type=4
+[mru-list]
+1=adc_qn.c
+
+[defines]
+buildcount=8
+
+[ProjectLog]
+Days=2
+D1=28-05-2022
+D1_L=5
+D1_L1=[70778]Stopped Editing.
+TotalEdit=14
+TotalDebug=0
+D1_E=2
+D1_D=0
+D1_L2=[70778]Project Closed.
+D1_L3=[82531]Project Opened.
+D1_L4=[83106]Started Editing.
+D1_L5=[83117]Stopped Editing.
+D2=29-05-2022
+D2_L=20
+D2_L1=[1512]Started Editing.
+D2_L2=[1554]Stopped Editing.
+D2_E=12
+D2_D=0
+D2_L3=[1604]Started Editing.
+D2_L4=[1716]Stopped Editing.
+D2_L5=[1750]Started Editing.
+D2_L6=[2181]Stopped Editing.
+D2_L7=[2331]Project Closed.
+D2_L8=[31902]Project Opened.
+D2_L9=[31907]Project Closed.
+D2_L10=[31910]Project Opened.
+D2_L11=[32185]Started Editing.
+D2_L12=[32485]Stopped Editing.
+D2_L13=[33845]Started Editing.
+D2_L14=[34179]Stopped Editing.
+D2_L15=[34179]Project Closed.
+D2_L16=[34189]Project Opened.
+D2_L17=[34190]Project Closed.
+D2_L18=[34191]Project Opened.
+D2_L19=[34209]Started Editing.
+D2_L20=[34985]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=45
+3=adc_qn.c
+t3=45
+4=taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+Count=5
+[Units]
+Count=1
+1=adc_qn (main)

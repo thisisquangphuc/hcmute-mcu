@@ -1,0 +1,6 @@
+Compiling E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day2\taoxung3type on 28-May-22 at 19:43
+>>> Warning 202 "C:\Program Files (x86)\PICC\Drivers\lcd.c" Line 82(9,15): Variable never used:   code7seg
+>>> Warning 202 "E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\Day2\taoxung3type.c" Line 12(15,20): Variable never used:   count
+      Memory usage:   ROM=2%      RAM=2% - 3%
+      0 Errors,  2 Warnings.
+Build Successful.

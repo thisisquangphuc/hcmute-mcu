@@ -1,0 +1,49 @@
+#include <16f887.h>
+#device adc=10
+#fuses intrc   //intrc_io
+#use delay(clock=8Mhz)
+#use rs232(BAUD=4800,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 
+
+#define LCD_ENABLE_PIN  PIN_D2                                    ////
+#define LCD_RS_PIN      PIN_D0                                    ////
+#define LCD_RW_PIN      PIN_D1                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7 
+#include <lcd.c>   //#include <tv_lcd.c>
+
+unsigned char rx_data;   
+unsigned int8 nd=0, capdo=0;
+int1 mode=0;   // 0-quay thuan, 1-quay nghich'
+unsigned int16 tocdo=0; 
+
+// ngat nhan du lieu uart 
+#int_rda
+void ngat_uart()
+{
+   rx_data = getc();
+   capdo = rx_data; 
+   clear_interrupt();
+}
+
+void hienthi_lcd()
+{
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"T=%02u",nd);
+   lcd_putc(223);
+   lcd_putc('C');
+   
+   lcd_gotoxy(1,2);
+   lcd_putc("DIR=");
+   if(mode ==0 )  lcd_putc("FW ");
+   else           lcd_putc("REV");
+   
+   lcd_gotoxy(8,1);
+   printf(lcd_putc,"Duty=%3u",capdo*100);
+   lcd_putc("%");
+}
+
+
+
+

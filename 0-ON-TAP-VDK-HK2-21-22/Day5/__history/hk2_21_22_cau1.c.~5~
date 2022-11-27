@@ -1,0 +1,15 @@
+#include <16f887.h>
+#fuses  intrc_io  // khai bao nay de su dung 2 chan A6,A7 thanh IO 
+#use delay(clock=8Mhz)
+
+unsigned int8 bdt=0;
+int1 led_status=0;
+int1 pulse_status=0;
+
+#int_timer0
+void timer0()
+{
+   //bo chi 64, nap=100
+   //tran du 5ms
+   
+}

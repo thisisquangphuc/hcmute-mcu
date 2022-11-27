@@ -1,0 +1,85 @@
+#include <16f887.h>
+#fuses intrc
+#use delay(clock=8M)
+const unsigned int8 code7seg[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90}; 
+
+#define P1        pin_b1
+#define P2        pin_b2
+#define P3        pin_b3
+#define PulseOut  pin_c2
+//khai bao bien 
+unsigned int8 mode=0; 
+unsigned int8 count=0;
+#bit TMR1IF = 0x0c.0
+
+void main()
+{  
+   set_tris_d(0x00);
+   set_tris_b(0xff);
+   set_tris_c(0x00);
+   
+   //setup_timer_1(t1_div_by_1|t1_internal);
+   //set_timer1(64536);
+   
+   while(true)
+   {
+      if(input(P1)==0)  
+      {
+         mode =1;
+         //tat timer
+         set_timer1(t1_disabled);
+      }
+      if(input(P2)==0)
+      {
+         mode =2;
+         //bat lai timer 
+         setup_timer_1(t1_div_by_1|t1_internal);
+         set_timer1(64536);
+      }
+      
+      
+      if(mode ==0 )
+      {
+         output_low(PulseOut); 
+         // 
+      }
+      else if( mode ==1)
+      {
+         output_high(PulseOut);
+         delay_us(1500); //1.5ms
+         output_low(PulseOut);
+         delay_us(500); //0.5ms
+      }
+      else if(mode==2)
+      {
+         //timer1 
+         /*cach 1 */
+//!         if(TMR1IF==1) //Tràn 
+//!         {
+//!            // du 0.5ms
+//!            set_timer1(64536); TMR1IF=0;
+//!            count++;
+//!            if(count==4) count=0;
+//!         }
+//!         
+//!         if(count<3) output_high(PulseOut);
+//!         else        output_low(PulseOut);   
+
+      /*cach 2 */
+         //dinh thoi 1.5ms
+         setup_timer_1(t1_div_by_1|t1_internal);
+         set_timer1(62536);
+         output_high(PulseOut);
+         while(TMR1IF==0);
+         TMR1IF=0;
+         //dinh thoi 0.5ms
+         setup_timer_1(t1_div_by_1|t1_internal);
+         set_timer1(64536);
+         output_low(PulseOut);
+         while(TMR1IF==0);
+      
+      }
+      
+      
+   }
+}

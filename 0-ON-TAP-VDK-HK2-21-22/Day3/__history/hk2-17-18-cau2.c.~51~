@@ -1,0 +1,100 @@
+#INCLUDE <16F887.H>
+#device adc=10
+#fuses hs,put, noprotect
+#use delay(clock=20M)
+
+#define LCD_ENABLE_PIN  PIN_D2                                    ////
+#define LCD_RS_PIN      PIN_D0                                    ////
+#define LCD_RW_PIN      PIN_D1                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7 
+#include <lcd.c>   //#include <tv_lcd.c> 
+
+#bit TMR1IF =0x0c.0
+
+#define LED    pin_e2
+
+unsigned int8 nd1, nd2;
+int1 led_status=0;  //0-off, 1-on
+unsigned int8 count=0;
+int1 update_temp=0;
+
+void ht_lcd()
+{
+   lcd_gotoxy(14,1);
+   //lcd_command(0x80+14);
+   if(nd1>100) lcd_putc("[H]"); //lcd_data("[H]")
+   else        lcd_putc("[L]");
+
+   lcd_gotoxy(14,2);
+   if(nd2>100) lcd_putc("[H]");
+   else        lcd_putc("[L]");
+   
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"Tx=%02u",nd1); //printf(lcd_data,"Tx=%02u",nd1);
+   lcd_putc(223); lcd_putc('C');
+   
+   lcd_gotoxy(1,2);
+   printf(lcd_putc,"Ty=%02u",nd2);
+   lcd_putc(223); lcd_putc('C');
+}
+
+
+void main()
+{
+   set_tris_e(0x03); //0b0000.0011 
+   set_tris_d(0x00);
+   
+   lcd_init();
+   setup_adc(adc_clock_div_32);
+   setup_adc_ports(SAN5|SAN6|VSS_VDD);
+   
+   setup_timer_1(t1_internal| t1_div_by_8);
+   set_timer1(3036);
+   
+   output_low(LED);
+   while(true)
+   {
+      if(TMR1IF==1) //Tràn 
+      {
+         //da du 100ms
+         set_timer1(3036); count++; TMR1IF=0;
+         if(count==5)
+         {   
+            //du 500ms
+            led_status=!led_status;
+            count=0;
+         }   
+         //Cap nhat gia tri nhiet do khi du 100ms
+         update_temp = 1;        
+      }
+      
+      if(update_temp==1)
+      {
+         set_adc_channel(5);
+         nd1=read_adc()/2.046;
+         set_adc_channel(6);
+         nd2=read_adc()/2.046;
+         //Tra bien cao nhat nhiet do ve 0 cho 100ms tiep theo
+         update_temp=0;
+      }
+      
+      //Nhap nhay led
+      if(nd1>100 || nd2>100)
+      {
+         if(led_status==0) output_low(LED);
+         else              output_high(LED);    
+      }
+      
+      //hien thi LCD
+      ht_lcd();
+      
+      
+      
+   }
+}
+
+
+

@@ -1,0 +1,79 @@
+[PROJECT]
+Target=Giua_ki_lan2_pic.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=Giua_ki_lan2_pic.c
+[Giua_ki_lan2_pic.c]
+Type=4
+[mru-list]
+1=Giua_ki_lan2_pic.c
+
+[defines]
+buildcount=12
+
+[ProjectLog]
+Days=2
+D1=04-06-2022
+D1_L=20
+D1_L1=[68861]Stopped Editing.
+TotalEdit=23
+TotalDebug=0
+D1_E=23
+D1_D=0
+D1_L2=[68879]Started Editing.
+D1_L3=[68916]Stopped Editing.
+D1_L4=[68924]Started Editing.
+D1_L5=[69239]Stopped Editing.
+D1_L6=[69276]Started Editing.
+D1_L7=[69278]Stopped Editing.
+D1_L8=[69347]Started Editing.
+D1_L9=[69376]Stopped Editing.
+D1_L10=[69401]Started Editing.
+D1_L11=[69405]Stopped Editing.
+D1_L12=[69426]Started Editing.
+D1_L13=[69433]Stopped Editing.
+D1_L14=[69440]Started Editing.
+D1_L15=[69450]Stopped Editing.
+D1_L16=[69589]Started Editing.
+D1_L17=[70112]Stopped Editing.
+D1_L18=[70531]Started Editing.
+D1_L19=[70834]Stopped Editing.
+D1_L20=[71087]Project Closed.
+D2=05-06-2022
+D2_L=5
+D2_L1=[36508]Project Opened.
+D2_L2=[36509]Project Closed.
+D2_L3=[36511]Project Opened.
+D2_L4=[36556]Started Editing.
+D2_L5=[37624]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=57
+3=..\Day2\adc_qn.c
+t3=1
+4=..\Day2\taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+6=..\day3\hk2-17-18-cau2.c
+t6=1
+7=..\day3\hk1-18-19-cau3.c
+t7=1
+8=..\day3\hk1-19-20-vdk1.c
+t8=1
+9=..\day3\hk1-19-20-vdk2.c
+t9=1
+10=Giua_ki_lan2_pic.c
+t10=1
+Count=10
+[Units]
+Count=1
+1=Giua_ki_lan2_pic (main)

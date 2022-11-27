@@ -1,0 +1,84 @@
+#include <16f887.h>
+#device adc=10
+#fuses hs
+#use delay(clock=20M)
+//Khaibao LCD
+#define LCD_ENABLE_PIN  PIN_E0                                    ////
+#define LCD_RS_PIN      PIN_E1                                    ////
+#define LCD_RW_PIN      PIN_E2                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7 
+#include <lcd.c>
+
+//khai bao bien 
+unsigned int8 nd1, nd2;
+unsigned int8 mode=0;
+
+#INT_EXT
+void ext_isr(void)
+{
+   mode=1;
+   clear_interrupt(INT_EXT);       // Clear external interrupt flag bit
+   output_toggle(PIN_C0);
+}
+
+void main()
+{
+   set_tris_a(0xff);
+   set_tris_d(0);set_tris_e(0);
+   
+   lcd_init();
+   setup_adc(adc_Clock_div_32);
+   setup_adc_ports(SAN1|SAN2|VSS_VREF);
+  
+   ext_int_edge(H_TO_L);           // External interrupt edge from high to low
+   enable_interrupts(INT_EXT);     // Enable external interrupt
+   enable_interrupts(GLOBAL); 
+   
+   while(true)
+   {
+      set_adc_Channel(1);
+      nd1=read_adc()/2.842;
+      set_adc_channel(2);
+      nd2=read_adc()/2.842;
+      
+      if(nd1>60 && nd2 >60)
+      {
+         //canh bao qua nhiet 2 kenh 
+         lcd_gotoxy(1,2);
+         lcd_putc("QUA NHIET 2K");
+      }
+      else if (nd1 > 60)
+      {
+         lcd_gotoxy(1,2);
+         lcd_putc("QUA NHIET K1");
+      }
+      else if (nd2 > 60)
+      {
+         lcd_gotoxy(1,2);
+         lcd_putc("QUA NHIET K2");
+      }
+      ELSE
+      {
+         lcd_gotoxy(1,2);
+         lcd_putc("               ");
+      }
+      
+      //Hien thi gia tri nhiet do 
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"T1=%02u",nd1);
+      lcd_putc(223); //dau do C
+      lcd_putc("C");
+
+      lcd_gotoxy(10,1);
+      printf(lcd_putc,"T2=%02u",nd2);
+      lcd_putc(223); //dau do C
+      lcd_putc("C");
+      
+   }
+}
+
+
+

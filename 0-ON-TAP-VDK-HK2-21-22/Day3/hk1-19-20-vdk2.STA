@@ -1,0 +1,49 @@
+
+ROM used:   151/8192 (2%)
+            151/8192 (2%) including unused fragments
+
+            0.2 Average locations per line
+            5.4 Average locations per statement
+
+RAM used:   9/368 (2%) at main() level
+            13/368 (4%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   70    28 100  hk1-19-20-vdk2.c
+  809     0   0  C:\Program Files (x86)\PICC\Devices\16F887.H
+----- -----
+  879    28 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+ Inline         1             @delay_ms1
+0     49  32    5    174  4.7  delay_msX
+0     98  65    1    396  3.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               2
+    Statements              28
+    Comments                144
+    Volume (V)              679
+    Difficulty (D)          8.1
+    Effort to implement (E) 5491
+    Time to implement (T)   5 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   6
+    Maintainability (MI)    125
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   147  1897  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

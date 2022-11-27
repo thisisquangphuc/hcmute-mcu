@@ -1,0 +1,4 @@
+#include <16f887.h>
+#device adc=10
+#fuse hs
+#use delay(clock=8M)

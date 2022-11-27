@@ -1,0 +1,60 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     rx_data
+021.0   mode
+022     main.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000027  @cinit2
+
+Project Directory:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\
+
+Project Files:
+    hk1-19-20-vdk1.c                                        [29-May-22 11:11  CRC=242CEA9A]
+    C:\Program Files (x86)\PICC\Devices\16F887.H            [21-Jan-21 18:32  CRC=461DBE83]
+
+Source signature=B06867A0
+Program memory checksum=0000
+Hex file CRC=EA5A
+
+Units:
+    E:\HCMUTE\0 - VXL\0 - TEACHING\Off-HK2-21-22\day3\hk1-19-20-vdk1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   hk1-19-20-vdk1.xsym
+    Errors:      hk1-19-20-vdk1.err
+    Ext Symbols: hk1-19-20-vdk1.esym
+    INHX8:       hk1-19-20-vdk1.hex
+    Symbols:     hk1-19-20-vdk1.sym
+    List:        hk1-19-20-vdk1.lst
+    Debug/COFF:  hk1-19-20-vdk1.cof
+    Project:     hk1-19-20-vdk1.ccspjt
+    Call Tree:   hk1-19-20-vdk1.tre
+    Statistics:  hk1-19-20-vdk1.STA

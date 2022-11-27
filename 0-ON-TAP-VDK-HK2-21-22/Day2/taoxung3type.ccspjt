@@ -1,0 +1,55 @@
+[PROJECT]
+Target=taoxung3type.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=taoxung3type.c
+[taoxung3type.c]
+Type=4
+[mru-list]
+1=taoxung3type.c
+
+[defines]
+buildcount=3
+
+[ProjectLog]
+Days=1
+D1=28-05-2022
+D1_L=13
+D1_L1=[70759]Project Closed.
+D1_L2=[70778]Project Opened.
+D1_L3=[70925]Started Editing.
+D1_L4=[71036]Stopped Editing.
+TotalEdit=11
+TotalDebug=0
+D1_E=11
+D1_D=0
+D1_L5=[71126]Started Editing.
+D1_L6=[71587]Stopped Editing.
+D1_L7=[71587]Project Closed.
+D1_L8=[82334]Project Opened.
+D1_L9=[82335]Project Closed.
+D1_L10=[82336]Project Opened.
+D1_L11=[82508]Started Editing.
+D1_L12=[82530]Stopped Editing.
+D1_L13=[82531]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=..\day1\lcd-RSRST.c
+t1=1
+2=C:\Program Files (x86)\PICC\Drivers\lcd.c
+t2=45
+3=adc_qn.c
+t3=1
+4=taoxung3type.c
+t4=1
+5=..\..\Online-T1-21-22\hk1_17_18\hk1_17_18.c
+t5=1
+Count=5
+[Units]
+Count=1
+1=taoxung3type (main)

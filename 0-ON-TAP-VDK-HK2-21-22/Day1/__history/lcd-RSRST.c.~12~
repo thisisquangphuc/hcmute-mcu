@@ -1,0 +1,41 @@
+#include <16f887.h>
+#fuses intrc
+#use delay(clock=8M)
+
+#define LCD_ENABLE_PIN  PIN_E0                                    ////
+#define LCD_RS_PIN      PIN_E1                                    ////
+#define LCD_RW_PIN      PIN_E2                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7 
+#include <lcd.c>
+
+#define RUN    pin_b0
+#define STOP   pin_b1
+//khong dinh nghia nut RESET o day,vi no duoc noi vao chan MCLR cua VDK
+// khi ma e nhan RESET thi chuong trinh cua e se chay lai tu dau
+// co nghia la ca bien cua e se dc khio tao lai
+
+unsigned int8  mode=0; //0=reset , 1-run, 2-stop
+unsigned int8  product=0;
+unsigned int16 box=0;
+
+void main()
+{
+   set_tris_d(0x00);
+   set_tris_e(0x00);
+   set_tris_c(0x01); //0b0000.0001  - counter 1 ==> pin_c0
+   
+   
+   lcd_init();
+   // hien thi 1 lan thi de o day 
+   
+   while(true)
+   {
+      
+      
+      
+   }
+}
+

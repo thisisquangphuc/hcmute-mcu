@@ -1,0 +1,8 @@
+#INCLUDE <16F887.H>
+#fuses intrc   //intrc_io
+#use delay(clock=8M)
+#use rs232(BAUD=4800,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 
+
+unsigned char rx_data=0;
+
+
