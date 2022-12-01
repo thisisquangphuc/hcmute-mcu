@@ -1,0 +1,32 @@
+[PROJECT]
+Target=adc-qn.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=adc-qn.c
+[adc-qn.c]
+Type=4
+[mru-list]
+1=adc-qn.c
+[Units]
+Count=1
+1=adc-qn (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=30-11-2022
+D1_L=7
+D1_L1=[71815]Stopped Editing.
+D1_L2=[72068]Started Editing.
+D1_L3=[72700]Stopped Editing.
+D1_L4=[72786]Started Editing.
+D1_L5=[73238]Project Closed.
+D1_L6=[76482]Project Opened.
+D1_L7=[76485]Project Closed.
+
+[fileformats]
+forcecoff=0

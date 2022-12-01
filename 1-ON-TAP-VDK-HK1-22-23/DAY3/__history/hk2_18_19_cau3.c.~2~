@@ -1,0 +1,5 @@
+#include <16f887.h>
+#device adc=10
+#fuses  intrc_io  // khai bao nay de su dung 2 chan A6,A7 thanh IO 
+#use delay(clock=8Mhz)
+#use rs232(BAUD=9600,BITS=8,STOP=1,PARITY=N,RCV=PIN_C7,XMIT=PIN_C6) 

@@ -1,0 +1,6 @@
+#include <16f887.h>
+#fuses hs,put,noprotect,nowdt   //intrc_io
+#use delay(clock=8Mhz)
+//khai bao led 7 seg
+
+

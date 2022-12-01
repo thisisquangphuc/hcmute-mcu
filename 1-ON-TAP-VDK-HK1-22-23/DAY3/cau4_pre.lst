@@ -1,0 +1,121 @@
+CCS PCM C Compiler, Version 5.101, 43599               30-Nov-22 20:25
+
+               Filename:   E:\HCMUTE\0 - VXL\0 - TEACHING\GIT code\hcmute-mcu\1-ON-TAP-VDK-HK1-22-23\DAY3\cau4_pre.lst
+
+               ROM used:   63 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16f887.h>
+.................... //////////// Standard Header file for the PIC16F887 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F887
+.................... 
+.................... #list
+.................... 
+.................... #fuses hs,put,noprotect,nowdt   //intrc_io
+.................... #use delay(clock=10Mhz)
+.................... 
+.................... #bit TMR1IF =0x0c.0
+.................... #define PULSE pin_e0
+.................... 
+.................... unsigned int8 count=0;
+.................... 
+.................... 
+.................... void main ()
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  CLRF   20
+0008:  BSF    03.5
+0009:  BSF    03.6
+000A:  MOVF   09,W
+000B:  ANDLW  C0
+000C:  MOVWF  09
+000D:  BCF    03.6
+000E:  BCF    1F.4
+000F:  BCF    1F.5
+0010:  MOVLW  00
+0011:  BSF    03.6
+0012:  MOVWF  08
+0013:  BCF    03.5
+0014:  CLRF   07
+0015:  CLRF   08
+0016:  CLRF   09
+0017:  BCF    03.7
+.................... {
+....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_4);
+0018:  MOVLW  25
+0019:  BCF    03.6
+001A:  MOVWF  10
+....................    set_timer1(64911);
+001B:  CLRF   0E
+001C:  MOVLW  FD
+001D:  MOVWF  0F
+001E:  MOVLW  8F
+001F:  MOVWF  0E
+0020:  NOP
+....................    while (true)
+....................    {
+....................       if(TMR1IF==1) //Tràn 
+0021:  BTFSS  0C.0
+0022:  GOTO   02B
+....................       {
+....................          //du 1ms
+....................          set_timer1(64911);  
+0023:  CLRF   0E
+0024:  MOVLW  FD
+0025:  MOVWF  0F
+0026:  MOVLW  8F
+0027:  MOVWF  0E
+0028:  NOP
+....................          TMR1IF=0;      //xoa co tran
+0029:  BCF    0C.0
+....................          count++;
+002A:  INCF   20,F
+....................       }
+....................       if(count<1)      output_high(PULSE);
+002B:  MOVF   20,F
+002C:  BTFSS  03.2
+002D:  GOTO   033
+002E:  BSF    03.5
+002F:  BCF    09.0
+0030:  BCF    03.5
+0031:  BSF    09.0
+0032:  GOTO   03D
+....................       else if(count<4)  output_low(PULSE);
+0033:  MOVF   20,W
+0034:  SUBLW  03
+0035:  BTFSS  03.0
+0036:  GOTO   03C
+0037:  BSF    03.5
+0038:  BCF    09.0
+0039:  BCF    03.5
+003A:  BCF    09.0
+003B:  GOTO   03D
+....................       else count=0;
+003C:  CLRF   20
+003D:  GOTO   021
+....................    }
+.................... }
+003E:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT

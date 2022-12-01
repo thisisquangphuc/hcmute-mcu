@@ -1,0 +1,60 @@
+[PROJECT]
+Target=cau4_pre.hex
+Processor_Text=PIC16F887
+CCSVersion=5.101
+Compiler=PCM
+[Target Data]
+FileList=cau4_pre.c
+[cau4_pre.c]
+Type=4
+[mru-list]
+1=cau4_pre.c
+
+[defines]
+buildcount=4
+
+[ProjectLog]
+Days=1
+D1=30-11-2022
+D1_L=14
+D1_L1=[73315]Started Editing.
+D1_L2=[73318]Stopped Editing.
+TotalEdit=6
+TotalDebug=0
+D1_E=6
+D1_D=0
+D1_L3=[73435]Started Editing.
+D1_L4=[73444]Stopped Editing.
+D1_L5=[73501]Started Editing.
+D1_L6=[73503]Stopped Editing.
+D1_L7=[75199]Started Editing.
+D1_L8=[75628]Stopped Editing.
+D1_L9=[76467]Project Closed.
+D1_L10=[76481]Project Opened.
+D1_L11=[76482]Project Closed.
+D1_L12=[76485]Project Opened.
+D1_L13=[76515]Started Editing.
+D1_L14=[76518]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=adc-qn.c
+t1=1
+2=..\..\0-ON-TAP-VDK-HK2-21-22\Day4\Giua_ki_lan2_pic.c
+t2=1
+3=..\..\0-ON-TAP-VDK-HK2-21-22\Day5\hk2_21_22_cau1.c
+t3=1
+4=..\..\0-ON-TAP-VDK-HK2-21-22\Day5\hk2_21_22_uc1.c
+t4=1
+5=..\..\0-ON-TAP-VDK-HK2-21-22\Day5\hk2_21_22_uc2.c
+t5=1
+6=cau1_pre.c
+t6=1
+7=cau4_pre.c
+t7=1
+Count=7
+[Units]
+Count=1
+1=cau4_pre (main)
