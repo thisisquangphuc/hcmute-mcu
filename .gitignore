@@ -42,6 +42,18 @@
 *.idb
 *.pdb
 
+#CCS compiler output files
+*.ccspjt
+*.cof
+*.err
+*.lst
+*.STA
+*.sym
+*.tre
+*.xsym
+*.bak
+*.esym
+
 # Kernel Module Compile Results
 *.mod*
 *.cmd
