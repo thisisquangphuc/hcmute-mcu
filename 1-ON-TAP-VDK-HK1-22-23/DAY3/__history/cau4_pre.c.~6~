@@ -1,8 +1,0 @@
-#include <16f887.h>
-#fuses hs,put,noprotect,nowdt   //intrc_io
-#use delay(clock=8Mhz)
-
-#bit TMR1IF =0x0c.0
-#define PULSE pin_e0
-
-unsigned int8 count=0; 

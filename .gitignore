@@ -53,6 +53,7 @@
 *.xsym
 *.bak
 *.esym
+__history/
 
 # Kernel Module Compile Results
 *.mod*
@@ -62,3 +63,4 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
