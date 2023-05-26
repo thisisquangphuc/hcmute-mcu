@@ -100,8 +100,7 @@ void main()
         if(temp!=prev_temp) {
             printf("%Lu",temp); 
             prev_temp = temp;
-        }                          
-              
+        }                            
    }
 }
 
